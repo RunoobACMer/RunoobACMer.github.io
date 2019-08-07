@@ -96,19 +96,17 @@
 
 
 
-  <meta name="description" content="markdown练习博客这是我的第一篇博客，用作markdown练习。日后用作个人学习记录平台。 引用  引用 大于号空格  123456#include&amp;lt;iostream&amp;gt;using namespace std;int main(string args[])      ///代码块引用三个反引号`` `这里如果打三个反引号会被识别 所以中间打了空格&amp;#123;    return 0">
+  <meta name="description" content="离散化概念维护数据大小顺序，压缩数值。 两种离散化 对应id的大小关系 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt;#include&amp;lt;al">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://RunoobACMer.github.io/2019/04/21/markdown练习/index.html">
+<meta property="og:title" content="离散化">
+<meta property="og:url" content="https://RunoobACMer.github.io/2019/08/07/离散化/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="markdown练习博客这是我的第一篇博客，用作markdown练习。日后用作个人学习记录平台。 引用  引用 大于号空格  123456#include&amp;lt;iostream&amp;gt;using namespace std;int main(string args[])      ///代码块引用三个反引号`` `这里如果打三个反引号会被识别 所以中间打了空格&amp;#123;    return 0">
+<meta property="og:description" content="离散化概念维护数据大小顺序，压缩数值。 两种离散化 对应id的大小关系 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt;#include&amp;lt;al">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pic40.nipic.com/20140413/12524762_163417225134_2.jpg">
-<meta property="og:updated_time" content="2019-04-21T01:50:30.068Z">
+<meta property="og:updated_time" content="2019-08-07T02:50:39.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="markdown练习博客这是我的第一篇博客，用作markdown练习。日后用作个人学习记录平台。 引用  引用 大于号空格  123456#include&amp;lt;iostream&amp;gt;using namespace std;int main(string args[])      ///代码块引用三个反引号`` `这里如果打三个反引号会被识别 所以中间打了空格&amp;#123;    return 0">
-<meta name="twitter:image" content="http://pic40.nipic.com/20140413/12524762_163417225134_2.jpg">
+<meta name="twitter:title" content="离散化">
+<meta name="twitter:description" content="离散化概念维护数据大小顺序，压缩数值。 两种离散化 对应id的大小关系 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt;#include&amp;lt;al">
 
 
 
@@ -116,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://RunoobACMer.github.io/2019/04/21/markdown练习/">
+  <link rel="canonical" href="https://RunoobACMer.github.io/2019/08/07/离散化/">
 
 
 
@@ -126,7 +124,7 @@
   };
 </script>
 
-  <title>Hello World | Hexo</title>
+  <title>离散化 | Hexo</title>
   
 
 
@@ -291,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/04/21/markdown练习/">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/07/离散化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen_zhuozhuo">
@@ -308,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">离散化
 
               
             
@@ -334,7 +332,7 @@
                 
               
 
-              <time title="创建时间：2019-04-21 09:21:06 / 修改时间：09:50:30" itemprop="dateCreated datePublished" datetime="2019-04-21T09:21:06+08:00">2019-04-21</time>
+              <time title="创建时间：2019-08-07 10:26:29 / 修改时间：10:50:39" itemprop="dateCreated datePublished" datetime="2019-08-07T10:26:29+08:00">2019-08-07</time>
             
 
             
@@ -373,19 +371,20 @@
       
 
       
-        <h3 id="markdown练习博客"><a href="#markdown练习博客" class="headerlink" title="markdown练习博客"></a>markdown练习博客</h3><p>这是我的第一篇博客，用作markdown练习。日后用作个人学习记录平台。</p>
-<p>引用</p>
-<blockquote>
-<p>引用 大于号空格</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main(string args[])      ///代码块引用三个反引号`` `这里如果打三个反引号会被识别 所以中间打了空格</span><br><span class="line">&#123;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>引用图片</p>
-<p>叹号中括号【任意写图片名】小括号（url）<br><img src="http://pic40.nipic.com/20140413/12524762_163417225134_2.jpg" alt></p>
-<p>超链接</p>
-<p>中括号小括号 会在我的博客下边找baidu.com 所以要加上http：//</p>
-<p><a href="http://www.baidu.com" target="_blank" rel="noopener">baidu</a></p>
-<p><strong>左右两个星号加粗</strong></p>
-<h4 id="End"><a href="#End" class="headerlink" title="End"></a>End</h4>
+        <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>维护数据大小顺序，压缩数值。</p>
+<h2 id="两种离散化"><a href="#两种离散化" class="headerlink" title="两种离散化"></a>两种离散化</h2><ol>
+<li><p>对应id的大小关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">struct node&#123;</span><br><span class="line">    int val,id;</span><br><span class="line">    node(int _val,int _id)&#123;</span><br><span class="line">        val = _val, id =  _id;</span><br><span class="line">    &#125;;</span><br><span class="line">    node()&#123;&#125;;</span><br><span class="line">&#125;a[8];</span><br><span class="line">int rankk[100];</span><br><span class="line">bool cmp(node n1,node n2)&#123;</span><br><span class="line">    return n1.val &lt; n2.val;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    ///离散化</span><br><span class="line">    a[1] = node(81,1);</span><br><span class="line">    a[2] = node(33,2);</span><br><span class="line">    a[3] = node(23,3);</span><br><span class="line">    a[4] = node(46,4);</span><br><span class="line">    a[5] = node(12,5);</span><br><span class="line">    a[6] = node(92,6);</span><br><span class="line">    a[7] = node(10,7);</span><br><span class="line">    cout&lt;&lt;&quot;处理前&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a+1,a+8,cmp);</span><br><span class="line">    cout&lt;&lt;&quot;排序后&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;8;i++)&#123;</span><br><span class="line">        rankk[a[i].id] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;离散化之后 保存了大小关系不变&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;rankk[i]&lt;&lt;&apos; &apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>维护大小关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Nested Segments 代码片段</span><br><span class="line">    sort(a+1,a+1+n,cmp1); 	///右端点排序</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        a[i].r = i;				///把-1e9到1e9的数据压缩到了n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
+<li>codeforces 652D Nested Segments</li>
+<li>洛谷p1908 逆序对<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2>离散化和<strong>树状数组</strong>常常一起出现。</li>
+</ol>
+
       
     </div>
 
@@ -415,14 +414,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/31/数论-威尔逊定理/" rel="next" title="数论-威尔逊定理">
+                <i class="fa fa-chevron-left"></i> 数论-威尔逊定理
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/21/shuiti/" rel="prev" title="找规律水题">
-                找规律水题 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/07/树状数组/" rel="prev" title="树状数组">
+                树状数组 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#markdown练习博客"><span class="nav-number">1.</span> <span class="nav-text">markdown练习博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#End"><span class="nav-number">1.1.</span> <span class="nav-text">End</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散化"><span class="nav-number">1.</span> <span class="nav-text">离散化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种离散化"><span class="nav-number">1.2.</span> <span class="nav-text">两种离散化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#习题"><span class="nav-number">1.3.</span> <span class="nav-text">习题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">1.4.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></div>
             
 
           </div>
