@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="线段树专题目录  写在前面 题目清单 hdu1166 敌兵布阵 hdu1754 I Heat It hdu1698 Just a Hook poj3468 A Simple Problem with Integers codeforces156A   总结写在前面本文作为个人练习使用，不能保证思路每个人都看懂。但是可以提供由易到难的题目清单。将会持续更新。题目清单    hdu1166 敌兵布阵/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-13T07:17:37.027Z">
+<meta property="og:updated_time" content="2019-08-13T07:21:46.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线段树专题">
 <meta name="twitter:description" content="线段树专题目录  写在前面 题目清单 hdu1166 敌兵布阵 hdu1754 I Heat It hdu1698 Just a Hook poj3468 A Simple Problem with Integers codeforces156A   总结写在前面本文作为个人练习使用，不能保证思路每个人都看懂。但是可以提供由易到难的题目清单。将会持续更新。题目清单    hdu1166 敌兵布阵/">
@@ -349,7 +349,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-13 15:17:37" itemprop="dateModified" datetime="2019-08-13T15:17:37+08:00">2019-08-13</time>
+                <time title="修改时间：2019-08-13 15:21:46" itemprop="dateModified" datetime="2019-08-13T15:21:46+08:00">2019-08-13</time>
               
             
           </span>
@@ -413,6 +413,7 @@
 <p></p><h2 id="8">总结</h2><p></p>
 <ol>
 <li>push_down在  if (L &lt;= l &amp;&amp; r &lt;= R)之后，<strong>否则在叶子节点接着向下访问</strong>，会导致数组越界<strong>RE</strong>。</li>
+<li>在update中，先下传懒标记在push_up.</li>
 <li>懒标记是<strong>给儿子用</strong>的.   儿子用父亲的lazy_tag。<br>例.tree[rt&lt;&lt;1].sum += <strong>tree[rt].lazy</strong> * getlen(rt&lt;&lt;1);   </li>
 <li>push_up操作一共有3次<br>(1)<strong>Query()</strong> 对于大多数运算，应该是可以不加的.因为原本tree[rt].sum=getlen(rt) <em> lazy；加上push_up后tree[rt].sum=tree[rt&lt;&lt;1].sum+tree[rt&lt;&lt;1|1].sum即tree[rt].lazy</em>getlen(rt&lt;&lt;1)+tree[rt].lazy<em>getlen(rt&lt;&lt;1|1);<br>提取公因式后，得到tree[rt].lazy</em>(getlen(rt&lt;&lt;1)+getlen(rt&lt;&lt;1|1)),即tree[rt].lazy*getlen(rt);两者应当是相等的。<br>但是如果本题不是加法，而是不满足结合律的运算。最好加上push_up。<br>(2)Update()<br>(3)Build()</li>
 <li>push_down操作一共有两次<br>(1)Update()<br>(2)Query()     </li>
