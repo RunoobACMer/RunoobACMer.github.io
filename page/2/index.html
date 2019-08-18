@@ -286,6 +286,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/05/14/逻辑错题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen_zhuozhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/14/逻辑错题/" class="post-title-link" itemprop="url">思维坑题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-14 22:00:41" itemprop="dateCreated datePublished" datetime="2019-05-14T22:00:41+08:00">2019-05-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-19 20:32:57" itemprop="dateModified" datetime="2019-07-19T20:32:57+08:00">2019-07-19</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="纪念我做过的逻辑坑题"><a href="#纪念我做过的逻辑坑题" class="headerlink" title="纪念我做过的逻辑坑题"></a>纪念我做过的逻辑坑题</h3><p>1.<br><img src="/2019/05/14/逻辑错题/1.png" alt="图挂了"><br>机器人走循环，没考虑一个回个走回原点的情况。</p>
+<p>2.<br><img src="/2019/05/14/逻辑错题/2.png" alt="图挂了"><br>每次除2，向上取整，直接求n次之后的数。<br>(1) 朴素的求，tle。<br>(2) 先求2的n次快速幂，再除以这个数（有小数向上加一），c++爆re，因为出现较大的浮点数。<br>java快速幂没爆re，过了。  而且尼玛java压根没用快速幂，直接Math.pow()。mmp<br>(3) 正规的解法，2的30次方超过了数据范围，只要进行30次即可。<br>(4) 尽管快速幂只有最后一次向上取整，朴素只要除2有余数就向上取整（很多次取整）事实上两者相等。（快速幂小数是0.几几几几，朴素是0.5）  </p>
+<p>3.<br><img src="/2019/05/14/逻辑错题/3.png" alt="图挂了"><br>几堆石子，两种操作，（1）移除一个（2）移动一个。多少次操作能每堆数量一致。<br>误解：从最大的开始往最小的移动。。。。。<br>正解：对应减去最终态的值,将正值求和。（<strong>我们只关心最终状态</strong>）  </p>
+<p>4.<br><img src="/2019/05/14/逻辑错题/4.png" alt="图挂了"><br>bfs本来若干个@（肯德基店），搜索若干次。tle<br>应该一次搜完一张图，不是见到@就return 大大节省时间。  </p>
+<p>5.没有图了，射泡泡的那题等等。有时候不用跑完一张图的每一个点，对角线跑一遍即可。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/04/23/bfs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -802,7 +961,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
