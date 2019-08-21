@@ -286,6 +286,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/21/概率hdu6695/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen_zhuozhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/21/概率hdu6695/" class="post-title-link" itemprop="url">概率hdu6695</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-21 21:36:42 / Modified: 21:50:56" itemprop="dateCreated datePublished" datetime="2019-08-21T21:36:42+08:00">2019-08-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>题面链接<a href="http://acm.hdu.edu.cn/showproblem.php?pid=6695" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=6695</a><br>有一个小孩，想让他女朋友开心，就去买礼物，有n件礼物，给出每件礼物使女朋友开心的概率，想使对 <strong>一个</strong> 礼物开心的概率最大，求该概率。保留6位小数。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
+<li>已知a和b是分别是她开心的概率，选a和b时，对一件礼物开心的概率是(1-a)<em> b + (1 b) </em> a。    </li>
+<li>要使选两个开心的概率大于选一个的概率，有<strong>(1-a)<em> b + (1-b) </em> a &gt; a</strong> ，有a&gt;0.5。    </li>
+<li>所以，对概率排序，若最大的大于0.5，直接输出，因为选任意多个，都会使这个数变小。    </li>
+<li>若最大的不大于0.5，以下都是猜想：选前k大数，猜想所求概率随着k先变大，在变小。<br>（有一个极值点）    </li>
+</ul>
+<h2 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h2><p>大胆假设，<strong>不光</strong> 敢于假设选前k大数，<strong>而且</strong> 假设该值先增大后减小。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/21/Gym-101196D图上广搜/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1701,163 +1851,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/07/31/数论-威尔逊定理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chen_zhuozhuo">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/31/数论-威尔逊定理/" class="post-title-link" itemprop="url">数论-威尔逊定理</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-07-31 20:08:48" itemprop="dateCreated datePublished" datetime="2019-07-31T20:08:48+08:00">2019-07-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-08-01 09:35:11" itemprop="dateModified" datetime="2019-08-01T09:35:11+08:00">2019-08-01</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="先理解同余"><a href="#先理解同余" class="headerlink" title="先理解同余"></a>先理解同余</h1><p> 若a≡b(mod m)<br> 则a=b+km</p>
-<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>（p-1)! ≡ -1  mod(p)<br>其中P必须是素数<br> 用人话解释一下：（p-1）!和 -1 关于P同余，-1加p是p-1，（p-1）！ 和 p-1 同余。<br> 两边同时除以（p-1），发现（p-2）！为1。<br> Q！mod（p） 可化为(p-2)!/(p-2)<em>(p-1)</em>…..<em>(Q+1);<br> 我们只要求 1/(p-2)</em>(p-1)<em>…..</em>(Q+1)即可，<br> 即他们的逆元相乘。</p>
-<h3 id="int128的使用"><a href="#int128的使用" class="headerlink" title="__int128的使用"></a>__int128的使用</h3><p>在windows下无法编译，linux下能编译，不能用cin，cout，需要手写读入和输出函数。<br> 代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">typedef unsigned long long ull;</span><br><span class="line">using namespace std;</span><br><span class="line">ull P;</span><br><span class="line">__int128 _a,_b,_m;</span><br><span class="line">ull mul (ull a, ull b, ull m) &#123;</span><br><span class="line">	_a = a, _b = b, _m = m;</span><br><span class="line">	return (ull)(_a * _b % _m);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ull powerMod(ull x, ull n,ull m) &#123;</span><br><span class="line">    ull res = 1;</span><br><span class="line">    while (n &gt; 0) &#123;</span><br><span class="line">        if  (n &amp; 1) //  判断是否为奇数，若是则true</span><br><span class="line">            res = mul(res,x,m);</span><br><span class="line">        x = mul(x,x,m);</span><br><span class="line">        n &gt;&gt;= 1;    //  相当于n /= 2;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ull getInv(ull a, ull b, ull m)&#123;</span><br><span class="line">    return powerMod(a,b,m);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">inline bool check(ull n)&#123;</span><br><span class="line">    for(ull i=2;i*i&lt;=n;i++)&#123;</span><br><span class="line">        if(n%i==0)</span><br><span class="line">            return 1;</span><br><span class="line">    &#125;</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int t;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;t);</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        scanf(&quot;%llu&quot;,&amp;P);</span><br><span class="line">        ull temp = P-1;</span><br><span class="line">        ull now = P-1;</span><br><span class="line">        while(check(now))&#123;</span><br><span class="line">            temp = mul(temp,getInv(now,P-2,P),P);</span><br><span class="line">            now--;</span><br><span class="line">        &#125;</span><br><span class="line">        int dka=0;</span><br><span class="line">        for(int j=1;j&lt;1000;j++)&#123;</span><br><span class="line">            for(int i=1;i&lt;=10000;i++)&#123;</span><br><span class="line">                dka = (dka*i)%P;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%llu\n&quot;,temp);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1904,7 +1897,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

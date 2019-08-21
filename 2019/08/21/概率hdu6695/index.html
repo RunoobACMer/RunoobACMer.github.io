@@ -96,22 +96,17 @@
 
 
 
-  <meta name="description" content="简单dp 2019牛客暑期多校训练营（第八场） Beauty Values题面(图片在./离散化文件夹下,不知道是不是因为这个标题有空格,图片插不进去)题面链接    题意找出所有区间，各个区间的不同元素个数的和。 思路显然，i-1位的个数和i位有关系。解释 图中红色的2，代表（4-2），即后边一列4个3，减去最后一次出现的3的个数。 我们发现，对于从未出现过的第i位。dp[i] = dp[i-1">
+  <meta name="description" content="题面题面链接http://acm.hdu.edu.cn/showproblem.php?pid=6695有一个小孩，想让他女朋友开心，就去买礼物，有n件礼物，给出每件礼物使女朋友开心的概率，想使对 一个 礼物开心的概率最大，求该概率。保留6位小数。 思路 已知a和b是分别是她开心的概率，选a和b时，对一件礼物开心的概率是(1-a) b + (1 b)  a。     要使选两个开心的概率大于选一个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单dp 2019牛客暑期多校训练营（第八场） Beauty Values">
-<meta property="og:url" content="https://RunoobACMer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/index.html">
+<meta property="og:title" content="概率hdu6695">
+<meta property="og:url" content="https://RunoobACMer.github.io/2019/08/21/概率hdu6695/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="简单dp 2019牛客暑期多校训练营（第八场） Beauty Values题面(图片在./离散化文件夹下,不知道是不是因为这个标题有空格,图片插不进去)题面链接    题意找出所有区间，各个区间的不同元素个数的和。 思路显然，i-1位的个数和i位有关系。解释 图中红色的2，代表（4-2），即后边一列4个3，减去最后一次出现的3的个数。 我们发现，对于从未出现过的第i位。dp[i] = dp[i-1">
+<meta property="og:description" content="题面题面链接http://acm.hdu.edu.cn/showproblem.php?pid=6695有一个小孩，想让他女朋友开心，就去买礼物，有n件礼物，给出每件礼物使女朋友开心的概率，想使对 一个 礼物开心的概率最大，求该概率。保留6位小数。 思路 已知a和b是分别是她开心的概率，选a和b时，对一件礼物开心的概率是(1-a) b + (1 b)  a。     要使选两个开心的概率大于选一个">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/1.png">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/2.png">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/3.png">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/4.png">
-<meta property="og:updated_time" content="2019-08-10T14:38:55.557Z">
+<meta property="og:updated_time" content="2019-08-21T13:50:56.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单dp 2019牛客暑期多校训练营（第八场） Beauty Values">
-<meta name="twitter:description" content="简单dp 2019牛客暑期多校训练营（第八场） Beauty Values题面(图片在./离散化文件夹下,不知道是不是因为这个标题有空格,图片插不进去)题面链接    题意找出所有区间，各个区间的不同元素个数的和。 思路显然，i-1位的个数和i位有关系。解释 图中红色的2，代表（4-2），即后边一列4个3，减去最后一次出现的3的个数。 我们发现，对于从未出现过的第i位。dp[i] = dp[i-1">
-<meta name="twitter:image" content="https://runoobacmer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/1.png">
+<meta name="twitter:title" content="概率hdu6695">
+<meta name="twitter:description" content="题面题面链接http://acm.hdu.edu.cn/showproblem.php?pid=6695有一个小孩，想让他女朋友开心，就去买礼物，有n件礼物，给出每件礼物使女朋友开心的概率，想使对 一个 礼物开心的概率最大，求该概率。保留6位小数。 思路 已知a和b是分别是她开心的概率，选a和b时，对一件礼物开心的概率是(1-a) b + (1 b)  a。     要使选两个开心的概率大于选一个">
 
 
 
@@ -119,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://RunoobACMer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/">
+  <link rel="canonical" href="https://RunoobACMer.github.io/2019/08/21/概率hdu6695/">
 
 
 
@@ -129,7 +124,7 @@
   };
 </script>
 
-  <title>简单dp 2019牛客暑期多校训练营（第八场） Beauty Values | Hexo</title>
+  <title>概率hdu6695 | Hexo</title>
   
 
 
@@ -294,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/21/概率hdu6695/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen_zhuozhuo">
@@ -311,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">简单dp 2019牛客暑期多校训练营（第八场） Beauty Values
+          <h1 class="post-title" itemprop="name headline">概率hdu6695
 
               
             
@@ -337,7 +332,7 @@
                 
               
 
-              <time title="Created: 2019-08-10 22:09:52 / Modified: 22:38:55" itemprop="dateCreated datePublished" datetime="2019-08-10T22:09:52+08:00">2019-08-10</time>
+              <time title="Created: 2019-08-21 21:36:42 / Modified: 21:50:56" itemprop="dateCreated datePublished" datetime="2019-08-21T21:36:42+08:00">2019-08-21</time>
             
 
             
@@ -376,11 +371,14 @@
       
 
       
-        <h1 id="简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values"><a href="#简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values" class="headerlink" title="简单dp 2019牛客暑期多校训练营（第八场） Beauty Values"></a>简单dp 2019牛客暑期多校训练营（第八场） Beauty Values</h1><h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>(图片在./离散化文件夹下,不知道是不是因为这个标题有空格,图片插不进去)<br><img src="/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/1.png" alt><br><img src="/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/2.png" alt><br><img src="/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/3.png" alt><br><a href="https://ac.nowcoder.com/acm/contest/888/B" target="_blank" rel="noopener">题面链接</a>   </p>
-<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>找出所有区间，各个区间的不同元素个数的和。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>显然，i-1位的个数和i位有关系。<br><img src="/2019/08/10/简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values/4.png" alt><br><strong>解释</strong> 图中红色的2，代表（4-2），即后边一列4个3，减去最后一次出现的3的个数。</p>
-<p>我们发现，对于从未出现过的第i位。dp[i] = dp[i-1] + i;<br>对于曾经出现过的第i位。dp[i] = dp[i-1] + i - vis[a[i]];<br>vis[]数组， 像一个桶，记录上一次a[i]出现的位置。（未出现是0，需要保持更新）<br>最后把dp[]数组加一遍即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line"></span><br><span class="line">const int maxn = 1e5+10;</span><br><span class="line">int a[maxn],vis[maxn];</span><br><span class="line">ll dp[maxn];</span><br><span class="line">int main()&#123;</span><br><span class="line">    //输入过程</span><br><span class="line">    int n;scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    //初始化</span><br><span class="line">    dp[1] = 1;</span><br><span class="line">    vis[a[1]] = 1;</span><br><span class="line"></span><br><span class="line">    for(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">        //a[i]未出现过</span><br><span class="line">        if(vis[a[i]]==0)&#123;</span><br><span class="line">            dp[i] = dp[i-1] + i;</span><br><span class="line">            vis[a[i]] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        //a[i]出现过</span><br><span class="line">        else&#123;</span><br><span class="line">            dp[i] = dp[i-1] +i - vis[a[i]];</span><br><span class="line">            vis[a[i]] = i;  ///vis[i]保持更新，最近一次a[i]出现的位置</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ll ans = 0;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        ans += dp[i];</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%lld\n&quot;,ans);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h2><p>dp[]爆int。  </p>
+        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>题面链接<a href="http://acm.hdu.edu.cn/showproblem.php?pid=6695" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=6695</a><br>有一个小孩，想让他女朋友开心，就去买礼物，有n件礼物，给出每件礼物使女朋友开心的概率，想使对 <strong>一个</strong> 礼物开心的概率最大，求该概率。保留6位小数。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
+<li>已知a和b是分别是她开心的概率，选a和b时，对一件礼物开心的概率是(1-a)<em> b + (1 b) </em> a。    </li>
+<li>要使选两个开心的概率大于选一个的概率，有<strong>(1-a)<em> b + (1-b) </em> a &gt; a</strong> ，有a&gt;0.5。    </li>
+<li>所以，对概率排序，若最大的大于0.5，直接输出，因为选任意多个，都会使这个数变小。    </li>
+<li>若最大的不大于0.5，以下都是猜想：选前k大数，猜想所求概率随着k先变大，在变小。<br>（有一个极值点）    </li>
+</ul>
+<h2 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h2><p>大胆假设，<strong>不光</strong> 敢于假设选前k大数，<strong>而且</strong> 假设该值先增大后减小。</p>
 
       
     </div>
@@ -411,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/07/树状数组/" rel="next" title="树状数组">
-                <i class="fa fa-chevron-left"></i> 树状数组
+              <a href="/2019/08/21/Gym-101196D图上广搜/" rel="next" title="Gym-101196D图上广搜">
+                <i class="fa fa-chevron-left"></i> Gym-101196D图上广搜
               </a>
             
           </div>
@@ -420,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/11/线段树专题/" rel="prev" title="线段树专题">
-                线段树专题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -534,7 +528,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单dp-2019牛客暑期多校训练营（第八场）-Beauty-Values"><span class="nav-number">1.</span> <span class="nav-text">简单dp 2019牛客暑期多校训练营（第八场） Beauty Values</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题面"><span class="nav-number">1.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.2.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip"><span class="nav-number">1.4.</span> <span class="nav-text">tip</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经验"><span class="nav-number">3.</span> <span class="nav-text">经验</span></a></li></ol></div>
             
 
           </div>
