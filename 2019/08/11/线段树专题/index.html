@@ -103,10 +103,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="线段树专题目录  写在前面 题目清单 hdu1166 敌兵布阵 hdu1754 I Heat It hdu1698 Just a Hook poj3468 A Simple Problem with Integers codeforces156A   总结写在前面本文作为个人练习使用，不能保证思路每个人都看懂。但是可以提供由易到难的题目清单。将会持续更新。题目清单    hdu1166 敌兵布阵/">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-13T07:35:35.440Z">
+<meta property="og:image" content="https://runoobacmer.github.io/2019/08/11/线段树专题/1.png">
+<meta property="og:updated_time" content="2019-08-26T10:37:09.908Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线段树专题">
 <meta name="twitter:description" content="线段树专题目录  写在前面 题目清单 hdu1166 敌兵布阵 hdu1754 I Heat It hdu1698 Just a Hook poj3468 A Simple Problem with Integers codeforces156A   总结写在前面本文作为个人练习使用，不能保证思路每个人都看懂。但是可以提供由易到难的题目清单。将会持续更新。题目清单    hdu1166 敌兵布阵/">
+<meta name="twitter:image" content="https://runoobacmer.github.io/2019/08/11/线段树专题/1.png">
 
 
 
@@ -349,7 +351,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-13 15:35:35" itemprop="dateModified" datetime="2019-08-13T15:35:35+08:00">2019-08-13</time>
+                <time title="Modified: 2019-08-26 18:37:09" itemprop="dateModified" datetime="2019-08-26T18:37:09+08:00">2019-08-26</time>
               
             
           </span>
@@ -418,6 +420,7 @@
 <li>push_up操作一共有3次<br>(1)<strong>Query()</strong> 对于大多数运算，应该是可以不加push_up的.因为原本tree[rt].sum=getlen(rt) <em> lazy；加上push_up后tree[rt].sum=tree[rt&lt;&lt;1].sum+tree[rt&lt;&lt;1|1].sum即tree[rt].lazy</em>getlen(rt&lt;&lt;1)+tree[rt].lazy<em>getlen(rt&lt;&lt;1|1);<br>提取公因式后，得到tree[rt].lazy</em>(getlen(rt&lt;&lt;1)+getlen(rt&lt;&lt;1|1)),即tree[rt].lazy*getlen(rt);两者应当是相等的。<br>但是如果本题不是加法，而是不满足结合律的运算。最好加上push_up。<br>(2)Update()<br>(3)Build()</li>
 <li>push_down操作一共有两次<br>(1)Update()<br>(2)Query()     </li>
 <li>tree[maxn&lt;&lt;2+100] 加运算优先，变成了左移102位，int（32位）左移102是0.(居然报tle)</li>
+<li>最容易出错的地方<br>（1）+= 写成 =<br>（2）如图所示<img src="/2019/08/11/线段树专题/1.png" alt="1"></li>
 </ol>
 
       

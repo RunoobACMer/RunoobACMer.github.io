@@ -1283,7 +1283,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-13 15:35:35" itemprop="dateModified" datetime="2019-08-13T15:35:35+08:00">2019-08-13</time>
+                <time title="Modified: 2019-08-26 18:37:09" itemprop="dateModified" datetime="2019-08-26T18:37:09+08:00">2019-08-26</time>
               
             
           </span>
@@ -1354,6 +1354,7 @@
 <li>push_up操作一共有3次<br>(1)<strong>Query()</strong> 对于大多数运算，应该是可以不加push_up的.因为原本tree[rt].sum=getlen(rt) <em> lazy；加上push_up后tree[rt].sum=tree[rt&lt;&lt;1].sum+tree[rt&lt;&lt;1|1].sum即tree[rt].lazy</em>getlen(rt&lt;&lt;1)+tree[rt].lazy<em>getlen(rt&lt;&lt;1|1);<br>提取公因式后，得到tree[rt].lazy</em>(getlen(rt&lt;&lt;1)+getlen(rt&lt;&lt;1|1)),即tree[rt].lazy*getlen(rt);两者应当是相等的。<br>但是如果本题不是加法，而是不满足结合律的运算。最好加上push_up。<br>(2)Update()<br>(3)Build()</li>
 <li>push_down操作一共有两次<br>(1)Update()<br>(2)Query()     </li>
 <li>tree[maxn&lt;&lt;2+100] 加运算优先，变成了左移102位，int（32位）左移102是0.(居然报tle)</li>
+<li>最容易出错的地方<br>（1）+= 写成 =<br>（2）如图所示<img src="/2019/08/11/线段树专题/1.png" alt="1"></li>
 </ol>
 
           
