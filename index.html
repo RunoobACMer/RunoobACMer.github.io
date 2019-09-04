@@ -286,6 +286,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/09/04/数论专题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen_zhuozhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/04/数论专题/" class="post-title-link" itemprop="url">数论专题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-09-04 17:19:00 / Modified: 18:14:32" itemprop="dateCreated datePublished" datetime="2019-09-04T17:19:00+08:00">2019-09-04</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数论四大定理"><a href="#数论四大定理" class="headerlink" title="数论四大定理"></a>数论四大定理</h1><ol>
+<li>威尔逊定理</li>
+<li>欧拉定理</li>
+<li>孙子定理（中国剩余定理）</li>
+<li>费马小定理</li>
+</ol>
+<h2 id="1-威尔逊定理"><a href="#1-威尔逊定理" class="headerlink" title="1 威尔逊定理"></a>1 威尔逊定理</h2><h3 id="1-1-干啥用"><a href="#1-1-干啥用" class="headerlink" title="1.1 干啥用"></a>1.1 干啥用</h3><p>( p -1 )! ≡ p-1 ( mod p ) 也写作<br>( p -1 )! ≡ <strong>-1</strong> ( mod p )</p>
+<h3 id="1-2-推论"><a href="#1-2-推论" class="headerlink" title="1.2 推论"></a>1.2 推论</h3><p>( p -2 )!（mod p） = 1<br>证明：(p-1)!≡-1(mod p)<br>则有 (p-1)! = p-1 (mod p)<br>则有 (p-2)!(mod p) = 1<br>即(p-2)!-1整除p    </p>
+<h2 id="2-孙子定理"><a href="#2-孙子定理" class="headerlink" title="2 孙子定理"></a>2 孙子定理</h2><p>摘自<a href="https://www.cnblogs.com/linyujun/p/5199415.html" target="_blank" rel="noopener">ACM数论之旅9—中国剩余定理(CRT)（壮哉我大中华╰(<em>°▽°</em>)╯）</a></p>
+<h3 id="2-1-干啥用"><a href="#2-1-干啥用" class="headerlink" title="2.1 干啥用"></a>2.1 干啥用</h3><p>一堆苹果，三个三个分，余2个。<br>四个四个分，余3个。<br>两个两个分，余一个。<br>问一共有多少苹果。</p>
+<h3 id="2-2-解法"><a href="#2-2-解法" class="headerlink" title="2.2 解法"></a>2.2 解法</h3><p>摘自<a href="https://www.cnblogs.com/linyujun/p/5199415.html" target="_blank" rel="noopener">ACM数论之旅9—中国剩余定理(CRT)（壮哉我大中华╰(<em>°▽°</em>)╯）</a><br><strong>代码：</strong><br>若m[i]不互质<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long LL;</span><br><span class="line">typedef pair&lt;LL, LL&gt; PLL;</span><br><span class="line">PLL linear(LL A[], LL B[], LL M[], int n) &#123;//求解A[i]x = B[i] (mod M[i]),总共n个线性方程组</span><br><span class="line">    LL x = 0, m = 1;</span><br><span class="line">    for(int i = 0; i &lt; n; i ++) &#123;</span><br><span class="line">       LL a = A[i] * m, b = B[i] - A[i]*x, d = gcd(M[i], a);</span><br><span class="line">       if(b % d != 0)  return PLL(0, -1);//答案不存在，返回-1</span><br><span class="line">       LL t = b/d * inv(a/d, M[i]/d)%(M[i]/d);</span><br><span class="line">       x = x + m*t;</span><br><span class="line">       m *= M[i]/d;</span><br><span class="line">   &#125;</span><br><span class="line">   x = (x % m + m ) % m;</span><br><span class="line">   return PLL(x, m);//返回的x就是答案，m是最后的lcm值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面的代码必须保证m[i]互质<br>摘自<a href="https://www.cnblogs.com/linyujun/p/5199415.html" target="_blank" rel="noopener">ACM数论之旅9—中国剩余定理(CRT)（壮哉我大中华╰(<em>°▽°</em>)╯）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//n个方程：x=a[i](mod m[i]) (0&lt;=i&lt;n)</span><br><span class="line">LL china(int n, LL *a, LL *m)&#123;</span><br><span class="line">      LL M = 1, ret = 0;</span><br><span class="line">      for(int i = 0; i &lt; n; i ++) M *= m[i];</span><br><span class="line">      for(int i = 0; i &lt; n; i ++)&#123;</span><br><span class="line">          LL w = M / m[i];</span><br><span class="line">          ret = (ret + w * inv(w, m[i]) * a[i]) % M;</span><br><span class="line">      &#125;</span><br><span class="line">      return (ret + M) % M;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>过程：</strong><br>没整明白。<br>反正ans = ∑ M’ × M × b[i]</p>
+<h3 id="2-3-习题"><a href="#2-3-习题" class="headerlink" title="2.3 习题"></a>2.3 习题</h3><p><a href="http://poj.org/problem?id=2891" target="_blank" rel="noopener">poj2891</a><br><a href="http://poj.org/problem?id=1006" target="_blank" rel="noopener">poj1006</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/21/概率hdu6695/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1283,7 +1439,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-29 17:06:06" itemprop="dateModified" datetime="2019-08-29T17:06:06+08:00">2019-08-29</time>
+                <time title="Modified: 2019-08-30 11:28:09" itemprop="dateModified" datetime="2019-08-30T11:28:09+08:00">2019-08-30</time>
               
             
           </span>
@@ -1355,7 +1511,7 @@
 <li>push_down操作一共有两次<br>(1)Update()<br>(2)Query()     </li>
 <li>tree[maxn&lt;&lt;2+100] 加运算优先，变成了左移102位，int（32位）左移102是0.(居然报tle)</li>
 <li>最容易出错的地方<br>（1）+= 写成 =<br>（2）如图所示<img src="/2019/08/11/线段树专题/1.png" alt="1"><br>（3）如图所示<img src="/2019/08/11/线段树专题/2.png" alt="2"></li>
-<li>push_donw什么时候用，破坏区间一致性的时候。</li>
+<li>push_donw什么时候用？破坏区间一致性的时候。</li>
 </ol>
 
           
@@ -1698,161 +1854,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/07/离散化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chen_zhuozhuo">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/07/离散化/" class="post-title-link" itemprop="url">离散化</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-08-07 10:26:29 / Modified: 10:50:39" itemprop="dateCreated datePublished" datetime="2019-08-07T10:26:29+08:00">2019-08-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>维护数据大小顺序，压缩数值。</p>
-<h2 id="两种离散化"><a href="#两种离散化" class="headerlink" title="两种离散化"></a>两种离散化</h2><ol>
-<li><p>对应id的大小关系</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">struct node&#123;</span><br><span class="line">    int val,id;</span><br><span class="line">    node(int _val,int _id)&#123;</span><br><span class="line">        val = _val, id =  _id;</span><br><span class="line">    &#125;;</span><br><span class="line">    node()&#123;&#125;;</span><br><span class="line">&#125;a[8];</span><br><span class="line">int rankk[100];</span><br><span class="line">bool cmp(node n1,node n2)&#123;</span><br><span class="line">    return n1.val &lt; n2.val;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    ///离散化</span><br><span class="line">    a[1] = node(81,1);</span><br><span class="line">    a[2] = node(33,2);</span><br><span class="line">    a[3] = node(23,3);</span><br><span class="line">    a[4] = node(46,4);</span><br><span class="line">    a[5] = node(12,5);</span><br><span class="line">    a[6] = node(92,6);</span><br><span class="line">    a[7] = node(10,7);</span><br><span class="line">    cout&lt;&lt;&quot;处理前&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a+1,a+8,cmp);</span><br><span class="line">    cout&lt;&lt;&quot;排序后&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;8;i++)&#123;</span><br><span class="line">        rankk[a[i].id] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;离散化之后 保存了大小关系不变&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;rankk[i]&lt;&lt;&apos; &apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>维护大小关系</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Nested Segments 代码片段</span><br><span class="line">    sort(a+1,a+1+n,cmp1); 	///右端点排序</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        a[i].r = i;				///把-1e9到1e9的数据压缩到了n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
-<li>codeforces 652D Nested Segments</li>
-<li>洛谷p1908 逆序对<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2>离散化和<strong>树状数组</strong>常常一起出现。</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1899,7 +1900,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

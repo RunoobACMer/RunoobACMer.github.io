@@ -286,6 +286,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/08/07/离散化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen_zhuozhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/07/离散化/" class="post-title-link" itemprop="url">离散化</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-07 10:26:29 / Modified: 10:50:39" itemprop="dateCreated datePublished" datetime="2019-08-07T10:26:29+08:00">2019-08-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>维护数据大小顺序，压缩数值。</p>
+<h2 id="两种离散化"><a href="#两种离散化" class="headerlink" title="两种离散化"></a>两种离散化</h2><ol>
+<li><p>对应id的大小关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">struct node&#123;</span><br><span class="line">    int val,id;</span><br><span class="line">    node(int _val,int _id)&#123;</span><br><span class="line">        val = _val, id =  _id;</span><br><span class="line">    &#125;;</span><br><span class="line">    node()&#123;&#125;;</span><br><span class="line">&#125;a[8];</span><br><span class="line">int rankk[100];</span><br><span class="line">bool cmp(node n1,node n2)&#123;</span><br><span class="line">    return n1.val &lt; n2.val;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    ///离散化</span><br><span class="line">    a[1] = node(81,1);</span><br><span class="line">    a[2] = node(33,2);</span><br><span class="line">    a[3] = node(23,3);</span><br><span class="line">    a[4] = node(46,4);</span><br><span class="line">    a[5] = node(12,5);</span><br><span class="line">    a[6] = node(92,6);</span><br><span class="line">    a[7] = node(10,7);</span><br><span class="line">    cout&lt;&lt;&quot;处理前&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a+1,a+8,cmp);</span><br><span class="line">    cout&lt;&lt;&quot;排序后&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;8;i++)&#123;</span><br><span class="line">        rankk[a[i].id] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;离散化之后 保存了大小关系不变&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;rankk[i]&lt;&lt;&apos; &apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>维护大小关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Nested Segments 代码片段</span><br><span class="line">    sort(a+1,a+1+n,cmp1); 	///右端点排序</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        a[i].r = i;				///把-1e9到1e9的数据压缩到了n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
+<li>codeforces 652D Nested Segments</li>
+<li>洛谷p1908 逆序对<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2>离散化和<strong>树状数组</strong>常常一起出现。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/07/31/数论-威尔逊定理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1416,7 +1571,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

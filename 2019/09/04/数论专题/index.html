@@ -96,22 +96,17 @@
 
 
 
-  <meta name="description" content="纪念我做过的逻辑坑题1.机器人走循环，没考虑一个回个走回原点的情况。 2.每次除2，向上取整，直接求n次之后的数。(1) 朴素的求，tle。(2) 先求2的n次快速幂，再除以这个数（有小数向上加一），c++爆re，因为出现较大的浮点数。java快速幂没爆re，过了。  而且尼玛java压根没用快速幂，直接Math.pow()。mmp(3) 正规的解法，2的30次方超过了数据范围，只要进行30次即可">
+  <meta name="description" content="数论四大定理 威尔逊定理 欧拉定理 孙子定理（中国剩余定理） 费马小定理  1 威尔逊定理1.1 干啥用( p -1 )! ≡ p-1 ( mod p ) 也写作( p -1 )! ≡ -1 ( mod p ) 1.2 推论( p -2 )!（mod p） = 1证明：(p-1)!≡-1(mod p)则有 (p-1)! = p-1 (mod p)则有 (p-2)!(mod p) = 1即(p-2)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="思维坑题">
-<meta property="og:url" content="https://RunoobACMer.github.io/2019/05/14/逻辑错题/index.html">
+<meta property="og:title" content="数论专题">
+<meta property="og:url" content="https://RunoobACMer.github.io/2019/09/04/数论专题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="纪念我做过的逻辑坑题1.机器人走循环，没考虑一个回个走回原点的情况。 2.每次除2，向上取整，直接求n次之后的数。(1) 朴素的求，tle。(2) 先求2的n次快速幂，再除以这个数（有小数向上加一），c++爆re，因为出现较大的浮点数。java快速幂没爆re，过了。  而且尼玛java压根没用快速幂，直接Math.pow()。mmp(3) 正规的解法，2的30次方超过了数据范围，只要进行30次即可">
+<meta property="og:description" content="数论四大定理 威尔逊定理 欧拉定理 孙子定理（中国剩余定理） 费马小定理  1 威尔逊定理1.1 干啥用( p -1 )! ≡ p-1 ( mod p ) 也写作( p -1 )! ≡ -1 ( mod p ) 1.2 推论( p -2 )!（mod p） = 1证明：(p-1)!≡-1(mod p)则有 (p-1)! = p-1 (mod p)则有 (p-2)!(mod p) = 1即(p-2)">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/05/14/逻辑错题/1.png">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/05/14/逻辑错题/2.png">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/05/14/逻辑错题/3.png">
-<meta property="og:image" content="https://runoobacmer.github.io/2019/05/14/逻辑错题/4.png">
-<meta property="og:updated_time" content="2019-07-19T12:32:57.461Z">
+<meta property="og:updated_time" content="2019-09-04T10:14:32.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="思维坑题">
-<meta name="twitter:description" content="纪念我做过的逻辑坑题1.机器人走循环，没考虑一个回个走回原点的情况。 2.每次除2，向上取整，直接求n次之后的数。(1) 朴素的求，tle。(2) 先求2的n次快速幂，再除以这个数（有小数向上加一），c++爆re，因为出现较大的浮点数。java快速幂没爆re，过了。  而且尼玛java压根没用快速幂，直接Math.pow()。mmp(3) 正规的解法，2的30次方超过了数据范围，只要进行30次即可">
-<meta name="twitter:image" content="https://runoobacmer.github.io/2019/05/14/逻辑错题/1.png">
+<meta name="twitter:title" content="数论专题">
+<meta name="twitter:description" content="数论四大定理 威尔逊定理 欧拉定理 孙子定理（中国剩余定理） 费马小定理  1 威尔逊定理1.1 干啥用( p -1 )! ≡ p-1 ( mod p ) 也写作( p -1 )! ≡ -1 ( mod p ) 1.2 推论( p -2 )!（mod p） = 1证明：(p-1)!≡-1(mod p)则有 (p-1)! = p-1 (mod p)则有 (p-2)!(mod p) = 1即(p-2)">
 
 
 
@@ -119,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://RunoobACMer.github.io/2019/05/14/逻辑错题/">
+  <link rel="canonical" href="https://RunoobACMer.github.io/2019/09/04/数论专题/">
 
 
 
@@ -129,7 +124,7 @@
   };
 </script>
 
-  <title>思维坑题 | Hexo</title>
+  <title>数论专题 | Hexo</title>
   
 
 
@@ -294,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/05/14/逻辑错题/">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/09/04/数论专题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen_zhuozhuo">
@@ -311,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">思维坑题
+          <h1 class="post-title" itemprop="name headline">数论专题
 
               
             
@@ -337,24 +332,12 @@
                 
               
 
-              <time title="Created: 2019-05-14 22:00:41" itemprop="dateCreated datePublished" datetime="2019-05-14T22:00:41+08:00">2019-05-14</time>
+              <time title="Created: 2019-09-04 17:19:00 / Modified: 18:14:32" itemprop="dateCreated datePublished" datetime="2019-09-04T17:19:00+08:00">2019-09-04</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-07-19 20:32:57" itemprop="dateModified" datetime="2019-07-19T20:32:57+08:00">2019-07-19</time>
               
             
           </span>
@@ -388,11 +371,20 @@
       
 
       
-        <h3 id="纪念我做过的逻辑坑题"><a href="#纪念我做过的逻辑坑题" class="headerlink" title="纪念我做过的逻辑坑题"></a>纪念我做过的逻辑坑题</h3><p>1.<br><img src="/2019/05/14/逻辑错题/1.png" alt="图挂了"><br>机器人走循环，没考虑一个回个走回原点的情况。</p>
-<p>2.<br><img src="/2019/05/14/逻辑错题/2.png" alt="图挂了"><br>每次除2，向上取整，直接求n次之后的数。<br>(1) 朴素的求，tle。<br>(2) 先求2的n次快速幂，再除以这个数（有小数向上加一），c++爆re，因为出现较大的浮点数。<br>java快速幂没爆re，过了。  而且尼玛java压根没用快速幂，直接Math.pow()。mmp<br>(3) 正规的解法，2的30次方超过了数据范围，只要进行30次即可。<br>(4) 尽管快速幂只有最后一次向上取整，朴素只要除2有余数就向上取整（很多次取整）事实上两者相等。（快速幂小数是0.几几几几，朴素是0.5）  </p>
-<p>3.<br><img src="/2019/05/14/逻辑错题/3.png" alt="图挂了"><br>几堆石子，两种操作，（1）移除一个（2）移动一个。多少次操作能每堆数量一致。<br>误解：从最大的开始往最小的移动。。。。。<br>正解：对应减去最终态的值,将正值求和。（<strong>我们只关心最终状态</strong>）  </p>
-<p>4.<br><img src="/2019/05/14/逻辑错题/4.png" alt="图挂了"><br>bfs本来若干个@（肯德基店），搜索若干次。tle<br>应该一次搜完一张图，不是见到@就return 大大节省时间。  </p>
-<p>5.没有图了，射泡泡的那题等等。有时候不用跑完一张图的每一个点，对角线跑一遍即可。</p>
+        <h1 id="数论四大定理"><a href="#数论四大定理" class="headerlink" title="数论四大定理"></a>数论四大定理</h1><ol>
+<li>威尔逊定理</li>
+<li>欧拉定理</li>
+<li>孙子定理（中国剩余定理）</li>
+<li>费马小定理</li>
+</ol>
+<h2 id="1-威尔逊定理"><a href="#1-威尔逊定理" class="headerlink" title="1 威尔逊定理"></a>1 威尔逊定理</h2><h3 id="1-1-干啥用"><a href="#1-1-干啥用" class="headerlink" title="1.1 干啥用"></a>1.1 干啥用</h3><p>( p -1 )! ≡ p-1 ( mod p ) 也写作<br>( p -1 )! ≡ <strong>-1</strong> ( mod p )</p>
+<h3 id="1-2-推论"><a href="#1-2-推论" class="headerlink" title="1.2 推论"></a>1.2 推论</h3><p>( p -2 )!（mod p） = 1<br>证明：(p-1)!≡-1(mod p)<br>则有 (p-1)! = p-1 (mod p)<br>则有 (p-2)!(mod p) = 1<br>即(p-2)!-1整除p    </p>
+<h2 id="2-孙子定理"><a href="#2-孙子定理" class="headerlink" title="2 孙子定理"></a>2 孙子定理</h2><p>摘自<a href="https://www.cnblogs.com/linyujun/p/5199415.html" target="_blank" rel="noopener">ACM数论之旅9—中国剩余定理(CRT)（壮哉我大中华╰(<em>°▽°</em>)╯）</a></p>
+<h3 id="2-1-干啥用"><a href="#2-1-干啥用" class="headerlink" title="2.1 干啥用"></a>2.1 干啥用</h3><p>一堆苹果，三个三个分，余2个。<br>四个四个分，余3个。<br>两个两个分，余一个。<br>问一共有多少苹果。</p>
+<h3 id="2-2-解法"><a href="#2-2-解法" class="headerlink" title="2.2 解法"></a>2.2 解法</h3><p>摘自<a href="https://www.cnblogs.com/linyujun/p/5199415.html" target="_blank" rel="noopener">ACM数论之旅9—中国剩余定理(CRT)（壮哉我大中华╰(<em>°▽°</em>)╯）</a><br><strong>代码：</strong><br>若m[i]不互质<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long LL;</span><br><span class="line">typedef pair&lt;LL, LL&gt; PLL;</span><br><span class="line">PLL linear(LL A[], LL B[], LL M[], int n) &#123;//求解A[i]x = B[i] (mod M[i]),总共n个线性方程组</span><br><span class="line">    LL x = 0, m = 1;</span><br><span class="line">    for(int i = 0; i &lt; n; i ++) &#123;</span><br><span class="line">       LL a = A[i] * m, b = B[i] - A[i]*x, d = gcd(M[i], a);</span><br><span class="line">       if(b % d != 0)  return PLL(0, -1);//答案不存在，返回-1</span><br><span class="line">       LL t = b/d * inv(a/d, M[i]/d)%(M[i]/d);</span><br><span class="line">       x = x + m*t;</span><br><span class="line">       m *= M[i]/d;</span><br><span class="line">   &#125;</span><br><span class="line">   x = (x % m + m ) % m;</span><br><span class="line">   return PLL(x, m);//返回的x就是答案，m是最后的lcm值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面的代码必须保证m[i]互质<br>摘自<a href="https://www.cnblogs.com/linyujun/p/5199415.html" target="_blank" rel="noopener">ACM数论之旅9—中国剩余定理(CRT)（壮哉我大中华╰(<em>°▽°</em>)╯）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//n个方程：x=a[i](mod m[i]) (0&lt;=i&lt;n)</span><br><span class="line">LL china(int n, LL *a, LL *m)&#123;</span><br><span class="line">      LL M = 1, ret = 0;</span><br><span class="line">      for(int i = 0; i &lt; n; i ++) M *= m[i];</span><br><span class="line">      for(int i = 0; i &lt; n; i ++)&#123;</span><br><span class="line">          LL w = M / m[i];</span><br><span class="line">          ret = (ret + w * inv(w, m[i]) * a[i]) % M;</span><br><span class="line">      &#125;</span><br><span class="line">      return (ret + M) % M;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>过程：</strong><br>没整明白。<br>反正ans = ∑ M’ × M × b[i]</p>
+<h3 id="2-3-习题"><a href="#2-3-习题" class="headerlink" title="2.3 习题"></a>2.3 习题</h3><p><a href="http://poj.org/problem?id=2891" target="_blank" rel="noopener">poj2891</a><br><a href="http://poj.org/problem?id=1006" target="_blank" rel="noopener">poj1006</a></p>
 
       
     </div>
@@ -423,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/23/bfs/" rel="next" title="搜索篇">
-                <i class="fa fa-chevron-left"></i> 搜索篇
+              <a href="/2019/08/21/概率hdu6695/" rel="next" title="概率hdu6695">
+                <i class="fa fa-chevron-left"></i> 概率hdu6695
               </a>
             
           </div>
@@ -432,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/19/逻辑题/" rel="prev" title="逻辑题">
-                逻辑题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#纪念我做过的逻辑坑题"><span class="nav-number">1.</span> <span class="nav-text">纪念我做过的逻辑坑题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数论四大定理"><span class="nav-number">1.</span> <span class="nav-text">数论四大定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-威尔逊定理"><span class="nav-number">1.1.</span> <span class="nav-text">1 威尔逊定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-干啥用"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 干啥用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-推论"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 推论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-孙子定理"><span class="nav-number">1.2.</span> <span class="nav-text">2 孙子定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-干啥用"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 干啥用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-解法"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-习题"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 习题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
