@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="先理解同余 若a≡b(mod m) 则a=b+km 威尔逊定理（p-1)! ≡ -1  mod(p)其中P必须是素数 用人话解释一下：（p-1）!和 -1 关于P同余，-1加p是p-1，（p-1）！ 和 p-1 同余。 两边同时除以（p-1），发现（p-2）！为1。 Q！mod（p） 可化为(p-2)!/(p-2)(p-1)…..(Q+1); 我们只要求 1/(p-2)(p-1)…..(Q+1)即">
+  <meta name="description" content="Graph theory seriesCodeForces 690C2    problem descriptionOut put the longest way in a tree.     used technologies accumlated vis[array].    abstract a zero vertex connect with every vectex.    bfs fo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数论-威尔逊定理">
-<meta property="og:url" content="https://RunoobACMer.github.io/2019/07/31/数论-威尔逊定理/index.html">
+<meta property="og:title" content="图论">
+<meta property="og:url" content="https://RunoobACMer.github.io/2019/09/10/图论/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="先理解同余 若a≡b(mod m) 则a=b+km 威尔逊定理（p-1)! ≡ -1  mod(p)其中P必须是素数 用人话解释一下：（p-1）!和 -1 关于P同余，-1加p是p-1，（p-1）！ 和 p-1 同余。 两边同时除以（p-1），发现（p-2）！为1。 Q！mod（p） 可化为(p-2)!/(p-2)(p-1)…..(Q+1); 我们只要求 1/(p-2)(p-1)…..(Q+1)即">
+<meta property="og:description" content="Graph theory seriesCodeForces 690C2    problem descriptionOut put the longest way in a tree.     used technologies accumlated vis[array].    abstract a zero vertex connect with every vectex.    bfs fo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-01T01:35:11.165Z">
+<meta property="og:updated_time" content="2019-09-10T15:03:13.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数论-威尔逊定理">
-<meta name="twitter:description" content="先理解同余 若a≡b(mod m) 则a=b+km 威尔逊定理（p-1)! ≡ -1  mod(p)其中P必须是素数 用人话解释一下：（p-1）!和 -1 关于P同余，-1加p是p-1，（p-1）！ 和 p-1 同余。 两边同时除以（p-1），发现（p-2）！为1。 Q！mod（p） 可化为(p-2)!/(p-2)(p-1)…..(Q+1); 我们只要求 1/(p-2)(p-1)…..(Q+1)即">
+<meta name="twitter:title" content="图论">
+<meta name="twitter:description" content="Graph theory seriesCodeForces 690C2    problem descriptionOut put the longest way in a tree.     used technologies accumlated vis[array].    abstract a zero vertex connect with every vectex.    bfs fo">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://RunoobACMer.github.io/2019/07/31/数论-威尔逊定理/">
+  <link rel="canonical" href="https://RunoobACMer.github.io/2019/09/10/图论/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>数论-威尔逊定理 | Hexo</title>
+  <title>图论 | Hexo</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/07/31/数论-威尔逊定理/">
+    <link itemprop="mainEntityOfPage" href="https://RunoobACMer.github.io/2019/09/10/图论/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen_zhuozhuo">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数论-威尔逊定理
+          <h1 class="post-title" itemprop="name headline">图论
 
               
             
@@ -332,24 +332,12 @@
                 
               
 
-              <time title="Created: 2019-07-31 20:08:48" itemprop="dateCreated datePublished" datetime="2019-07-31T20:08:48+08:00">2019-07-31</time>
+              <time title="Created: 2019-09-10 20:13:03 / Modified: 23:03:13" itemprop="dateCreated datePublished" datetime="2019-09-10T20:13:03+08:00">2019-09-10</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-08-01 09:35:11" itemprop="dateModified" datetime="2019-08-01T09:35:11+08:00">2019-08-01</time>
               
             
           </span>
@@ -383,9 +371,14 @@
       
 
       
-        <h1 id="先理解同余"><a href="#先理解同余" class="headerlink" title="先理解同余"></a>先理解同余</h1><p> 若a≡b(mod m)<br> 则a=b+km</p>
-<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>（p-1)! ≡ -1  mod(p)<br>其中P必须是素数<br> 用人话解释一下：（p-1）!和 -1 关于P同余，-1加p是p-1，（p-1）！ 和 p-1 同余。<br> 两边同时除以（p-1），发现（p-2）！为1。<br> Q！mod（p） 可化为(p-2)!/(p-2)<em>(p-1)</em>…..<em>(Q+1);<br> 我们只要求 1/(p-2)</em>(p-1)<em>…..</em>(Q+1)即可，<br> 即他们的逆元相乘。</p>
-<h3 id="int128的使用"><a href="#int128的使用" class="headerlink" title="__int128的使用"></a>__int128的使用</h3><p>在windows下无法编译，linux下能编译，不能用cin，cout，需要手写读入和输出函数。<br> 代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">typedef unsigned long long ull;</span><br><span class="line">using namespace std;</span><br><span class="line">ull P;</span><br><span class="line">__int128 _a,_b,_m;</span><br><span class="line">ull mul (ull a, ull b, ull m) &#123;</span><br><span class="line">	_a = a, _b = b, _m = m;</span><br><span class="line">	return (ull)(_a * _b % _m);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ull powerMod(ull x, ull n,ull m) &#123;</span><br><span class="line">    ull res = 1;</span><br><span class="line">    while (n &gt; 0) &#123;</span><br><span class="line">        if  (n &amp; 1) //  判断是否为奇数，若是则true</span><br><span class="line">            res = mul(res,x,m);</span><br><span class="line">        x = mul(x,x,m);</span><br><span class="line">        n &gt;&gt;= 1;    //  相当于n /= 2;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ull getInv(ull a, ull b, ull m)&#123;</span><br><span class="line">    return powerMod(a,b,m);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">inline bool check(ull n)&#123;</span><br><span class="line">    for(ull i=2;i*i&lt;=n;i++)&#123;</span><br><span class="line">        if(n%i==0)</span><br><span class="line">            return 1;</span><br><span class="line">    &#125;</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int t;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;t);</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        scanf(&quot;%llu&quot;,&amp;P);</span><br><span class="line">        ull temp = P-1;</span><br><span class="line">        ull now = P-1;</span><br><span class="line">        while(check(now))&#123;</span><br><span class="line">            temp = mul(temp,getInv(now,P-2,P),P);</span><br><span class="line">            now--;</span><br><span class="line">        &#125;</span><br><span class="line">        int dka=0;</span><br><span class="line">        for(int j=1;j&lt;1000;j++)&#123;</span><br><span class="line">            for(int i=1;i&lt;=10000;i++)&#123;</span><br><span class="line">                dka = (dka*i)%P;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%llu\n&quot;,temp);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Graph-theory-series"><a href="#Graph-theory-series" class="headerlink" title="Graph theory series"></a>Graph theory series</h1><p><a href="http://codeforces.com/problemset/problem/690/C2" target="_blank" rel="noopener">CodeForces 690C2</a>   </p>
+<h2 id="problem-description"><a href="#problem-description" class="headerlink" title="problem description"></a>problem description</h2><p>Out put the longest way in a tree.    </p>
+<h2 id="used-technologies"><a href="#used-technologies" class="headerlink" title="used technologies"></a>used technologies</h2><ol>
+<li>accumlated vis[array].   </li>
+<li>abstract a zero vertex connect with every vectex.   </li>
+<li>bfs for twice, and you’ll find the longese way.     </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">//两次广搜，图上最长路</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">const int maxn = 100010;</span><br><span class="line">int head[maxn];</span><br><span class="line">int n,m;</span><br><span class="line">int num = 1;</span><br><span class="line">int vis[maxn];</span><br><span class="line"></span><br><span class="line">struct Edge&#123;</span><br><span class="line">    int to;      /// v == to</span><br><span class="line">    int next;</span><br><span class="line">&#125;edge[2*maxn];</span><br><span class="line"></span><br><span class="line">void init()&#123;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">        head[i] = -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void addedge(int from,int to)&#123;</span><br><span class="line">  edge[num].to = to;</span><br><span class="line">  edge[num].next = head[from];</span><br><span class="line">  head[from] = num++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</span><br><span class="line">    init();</span><br><span class="line">    int from,to;</span><br><span class="line">    for(int i=1;i&lt;=m;i++)&#123;</span><br><span class="line">        scanf(&quot;%d%d&quot;,&amp;from,&amp;to);</span><br><span class="line">        addedge(from,to);</span><br><span class="line">        addedge(to,from);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int spot = -1;</span><br><span class="line">    queue&lt;int&gt; Q;</span><br><span class="line">    Q.push(1);</span><br><span class="line">    vis[1] = 1;</span><br><span class="line">    int maxx = 1;</span><br><span class="line">    while(Q.size())&#123;</span><br><span class="line">        int temp = Q.front();</span><br><span class="line">        Q.pop();</span><br><span class="line">        for(int i=head[temp];i!=-1;i = edge[i].next)&#123;</span><br><span class="line">            if(vis[edge[i].to])</span><br><span class="line">                continue;</span><br><span class="line">            Q.push(edge[i].to);</span><br><span class="line">            vis[edge[i].to] = vis[temp]+1;</span><br><span class="line">            if(vis[edge[i].to] &gt; maxx)&#123;</span><br><span class="line">                maxx = vis[edge[i].to];</span><br><span class="line">                spot = edge[i].to;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int ans = 0;</span><br><span class="line">    memset(vis,-1,sizeof(vis));</span><br><span class="line">    while(Q.size()) Q.pop();</span><br><span class="line">    Q.push(spot);</span><br><span class="line">    vis[spot] = 0;</span><br><span class="line"></span><br><span class="line">    while(Q.size())&#123;</span><br><span class="line">        int temp = Q.front();</span><br><span class="line">        Q.pop();</span><br><span class="line">        for(int i=head[temp];i!=-1;i = edge[i].next)&#123;</span><br><span class="line">            if(vis[edge[i].to]!=-1)</span><br><span class="line">                continue;</span><br><span class="line">            Q.push(edge[i].to);</span><br><span class="line">            vis[edge[i].to] = vis[temp]+1;</span><br><span class="line">            if(ans &lt; vis[edge[i].to])</span><br><span class="line">                ans = vis[edge[i].to];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -416,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/30/树的直径/" rel="next" title="树的直径">
-                <i class="fa fa-chevron-left"></i> 树的直径
+              <a href="/2019/09/04/数论专题/" rel="next" title="数论专题">
+                <i class="fa fa-chevron-left"></i> 数论专题
               </a>
             
           </div>
@@ -425,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/07/离散化/" rel="prev" title="离散化">
-                离散化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -539,7 +528,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#先理解同余"><span class="nav-number">1.</span> <span class="nav-text">先理解同余</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#威尔逊定理"><span class="nav-number">2.</span> <span class="nav-text">威尔逊定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#int128的使用"><span class="nav-number">2.0.1.</span> <span class="nav-text">__int128的使用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Graph-theory-series"><span class="nav-number">1.</span> <span class="nav-text">Graph theory series</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-description"><span class="nav-number">1.1.</span> <span class="nav-text">problem description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#used-technologies"><span class="nav-number">1.2.</span> <span class="nav-text">used technologies</span></a></li></ol></li></ol></div>
             
 
           </div>
