@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="离散化概念维护数据大小顺序，压缩数值。 两种离散化 对应id的大小关系 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt;#include&amp;lt;al">
+  <meta name="description" content="离散化概念维护数据大小顺序，压缩数值。 三种离散化 标准写法acwing802Q1:为什么不用树状数组。A:因为树状数组是在线查询（一边插入，一边查询），这题直接前缀和相减。Q2:为什么数据范围1e5,却开了3e5的a数组和sum数组。A:因为离散化剩下的，是插入用的点（1e5）和查询用的点（左右共2e5），所以涉及到的点都要出现在离散化后的数组里。就是3e5。Q3:alls排序去重后，是什么。A">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离散化">
 <meta property="og:url" content="https://RunoobACMer.github.io/2019/08/07/离散化/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="离散化概念维护数据大小顺序，压缩数值。 两种离散化 对应id的大小关系 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt;#include&amp;lt;al">
+<meta property="og:description" content="离散化概念维护数据大小顺序，压缩数值。 三种离散化 标准写法acwing802Q1:为什么不用树状数组。A:因为树状数组是在线查询（一边插入，一边查询），这题直接前缀和相减。Q2:为什么数据范围1e5,却开了3e5的a数组和sum数组。A:因为离散化剩下的，是插入用的点（1e5）和查询用的点（左右共2e5），所以涉及到的点都要出现在离散化后的数组里。就是3e5。Q3:alls排序去重后，是什么。A">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-07T02:50:39.632Z">
+<meta property="og:updated_time" content="2019-09-11T12:02:42.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离散化">
-<meta name="twitter:description" content="离散化概念维护数据大小顺序，压缩数值。 两种离散化 对应id的大小关系 123456789101112131415161718192021222324252627282930313233343536373839404142434445#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;cstring&amp;gt;#include&amp;lt;al">
+<meta name="twitter:description" content="离散化概念维护数据大小顺序，压缩数值。 三种离散化 标准写法acwing802Q1:为什么不用树状数组。A:因为树状数组是在线查询（一边插入，一边查询），这题直接前缀和相减。Q2:为什么数据范围1e5,却开了3e5的a数组和sum数组。A:因为离散化剩下的，是插入用的点（1e5）和查询用的点（左右共2e5），所以涉及到的点都要出现在离散化后的数组里。就是3e5。Q3:alls排序去重后，是什么。A">
 
 
 
@@ -332,12 +332,24 @@
                 
               
 
-              <time title="Created: 2019-08-07 10:26:29 / Modified: 10:50:39" itemprop="dateCreated datePublished" datetime="2019-08-07T10:26:29+08:00">2019-08-07</time>
+              <time title="Created: 2019-08-07 10:26:29" itemprop="dateCreated datePublished" datetime="2019-08-07T10:26:29+08:00">2019-08-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-11 20:02:42" itemprop="dateModified" datetime="2019-09-11T20:02:42+08:00">2019-09-11</time>
               
             
           </span>
@@ -372,17 +384,21 @@
 
       
         <h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>维护数据大小顺序，压缩数值。</p>
-<h2 id="两种离散化"><a href="#两种离散化" class="headerlink" title="两种离散化"></a>两种离散化</h2><ol>
-<li><p>对应id的大小关系</p>
+<h2 id="三种离散化"><a href="#三种离散化" class="headerlink" title="三种离散化"></a>三种离散化</h2><ol>
+<li><p>标准写法<br><a href="https://www.acwing.com/problem/content/description/804/" target="_blank" rel="noopener">acwing802</a><br>Q1:为什么不用树状数组。<br>A:因为树状数组是在线查询（一边插入，一边查询），这题直接前缀和相减。<br>Q2:为什么数据范围1e5,却开了3e5的a数组和sum数组。<br>A:因为离散化剩下的，是插入用的点（1e5）和查询用的点（左右共2e5），所以涉及到的点都要出现在离散化后的数组里。就是3e5。<br>Q3:alls排序去重后，是什么。<br>A:是排序去重后的原数组的值，更是用来 <strong>确定映射前后位置</strong> 的桥梁。<br>Q4:（1）二分为什么从0到n-1,（2）为什么返回l+1。<br>A:（1）vector下标从0开始。<br>（2）按题目要求，本题映射后的数组从1开始。（前缀和sum[i-1]访问越界）<br>Q5:#pragma GCC diagnostic error “-std=c++11” 是什么。<br>A:gcc/g++以c++11编译，否则 auto编译不过。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">//来源acwing https://www.acwing.com/solution/acwing/content/2321/</span><br><span class="line">#include &quot;iostream&quot;</span><br><span class="line">#include &quot;algorithm&quot;</span><br><span class="line">#include &quot;vector&quot;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn = 1e5+10;</span><br><span class="line">#pragma GCC diagnostic error &quot;-std=c++11&quot;</span><br><span class="line">typedef pair&lt;int,int&gt; PII;</span><br><span class="line">vector&lt;PII&gt; add,query;</span><br><span class="line">vector&lt;int&gt; alls;</span><br><span class="line">int a[3*maxn],sum[3*maxn];</span><br><span class="line"></span><br><span class="line">int find(int x)&#123;</span><br><span class="line">  int l = 0, r = alls.size()-1;</span><br><span class="line">  while(l &lt; r)&#123;</span><br><span class="line">    int mid = l+r&gt;&gt;1;</span><br><span class="line">    if(alls[mid] &gt;= x)</span><br><span class="line">      r = mid;</span><br><span class="line">    else</span><br><span class="line">      l = mid + 1;</span><br><span class="line">  &#125;</span><br><span class="line">  return l+1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">  int n,q,pos,val,l,r;</span><br><span class="line">  cin&gt;&gt;n&gt;&gt;q;</span><br><span class="line">  for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">    cin&gt;&gt;pos&gt;&gt;val;</span><br><span class="line">    add.push_back(&#123;pos,val&#125;);</span><br><span class="line">    alls.push_back(pos);</span><br><span class="line">  &#125;</span><br><span class="line">  for(int i=1;i&lt;=q;i++)&#123;</span><br><span class="line">    cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">    query.push_back(&#123;l,r&#125;);</span><br><span class="line">    alls.push_back(l);</span><br><span class="line">    alls.push_back(r);</span><br><span class="line">  &#125;</span><br><span class="line">  sort(alls.begin(),alls.end());</span><br><span class="line">  alls.erase(unique(alls.begin(),alls.end()),alls.end());</span><br><span class="line"></span><br><span class="line">  for(auto iter : add)&#123;</span><br><span class="line">    int pos = find(iter.first);</span><br><span class="line">    a[pos] += iter.second;</span><br><span class="line">  &#125;</span><br><span class="line">  for(int i=1;i&lt;=alls.size();i++) sum[i] = sum[i-1] + a[i];</span><br><span class="line">  for(auto iter : query)&#123;</span><br><span class="line">    int l = find(iter.first);</span><br><span class="line">    int r = find(iter.second);</span><br><span class="line">    cout&lt;&lt;sum[r]-sum[l-1]&lt;&lt;endl;</span><br><span class="line">  &#125;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>结构体存id和val</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">struct node&#123;</span><br><span class="line">    int val,id;</span><br><span class="line">    node(int _val,int _id)&#123;</span><br><span class="line">        val = _val, id =  _id;</span><br><span class="line">    &#125;;</span><br><span class="line">    node()&#123;&#125;;</span><br><span class="line">&#125;a[8];</span><br><span class="line">int rankk[100];</span><br><span class="line">bool cmp(node n1,node n2)&#123;</span><br><span class="line">    return n1.val &lt; n2.val;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    ///离散化</span><br><span class="line">    a[1] = node(81,1);</span><br><span class="line">    a[2] = node(33,2);</span><br><span class="line">    a[3] = node(23,3);</span><br><span class="line">    a[4] = node(46,4);</span><br><span class="line">    a[5] = node(12,5);</span><br><span class="line">    a[6] = node(92,6);</span><br><span class="line">    a[7] = node(10,7);</span><br><span class="line">    cout&lt;&lt;&quot;处理前&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a+1,a+8,cmp);</span><br><span class="line">    cout&lt;&lt;&quot;排序后&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;id为 &quot;&lt;&lt;a[i].id&lt;&lt;&quot; -&gt; &quot;&lt;&lt;&quot;键值为&quot;&lt;&lt;a[i].val&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;8;i++)&#123;</span><br><span class="line">        rankk[a[i].id] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;&quot;离散化之后 保存了大小关系不变&quot;&lt;&lt;endl;</span><br><span class="line">    for(int i=1;i&lt;=7;i++)&#123;</span><br><span class="line">        cout&lt;&lt;rankk[i]&lt;&lt;&apos; &apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>维护大小关系</p>
+<li><p>不在乎结构体数组的顺序，维护大小关系</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Nested Segments 代码片段</span><br><span class="line">    sort(a+1,a+1+n,cmp1); 	///右端点排序</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        a[i].r = i;				///把-1e9到1e9的数据压缩到了n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
 <li>codeforces 652D Nested Segments</li>
-<li>洛谷p1908 逆序对<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2>离散化和<strong>树状数组</strong>常常一起出现。</li>
+<li>洛谷p1908 逆序对</li>
+<li><a href="https://www.acwing.com/problem/content/description/804/" target="_blank" rel="noopener">acwing802</a>            <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2>离散化和 <strong>树状数组</strong> 常常一起出现。</li>
 </ol>
 
       
@@ -537,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散化"><span class="nav-number">1.</span> <span class="nav-text">离散化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种离散化"><span class="nav-number">1.2.</span> <span class="nav-text">两种离散化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#习题"><span class="nav-number">1.3.</span> <span class="nav-text">习题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">1.4.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离散化"><span class="nav-number">1.</span> <span class="nav-text">离散化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三种离散化"><span class="nav-number">1.2.</span> <span class="nav-text">三种离散化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#习题"><span class="nav-number">1.3.</span> <span class="nav-text">习题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">1.4.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></div>
             
 
           </div>
