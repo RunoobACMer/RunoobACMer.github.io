@@ -96,14 +96,17 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="借用大佬模板原文   作用范围单峰函数的最值。 模板凸函数求极大值：整型：while(l+1&amp;lt;r){    int lm=(l+r)&amp;gt;&amp;gt;1,rm=(lm+r)&amp;gt;&amp;gt;1;    if(judge(lm)&amp;gt;judge(rm))        r=rm;    else        l=lm;}//答案取 l 小数：while(l+eps&amp;lt;r){    doub">
+<meta property="og:type" content="article">
 <meta property="og:title" content="三分">
 <meta property="og:url" content="https://RunoobACMer.github.io/2019/10/21/三分/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="借用大佬模板原文   作用范围单峰函数的最值。 模板凸函数求极大值：整型：while(l+1&amp;lt;r){    int lm=(l+r)&amp;gt;&amp;gt;1,rm=(lm+r)&amp;gt;&amp;gt;1;    if(judge(lm)&amp;gt;judge(rm))        r=rm;    else        l=lm;}//答案取 l 小数：while(l+eps&amp;lt;r){    doub">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-21T09:54:40.382Z">
+<meta property="og:updated_time" content="2019-10-21T10:36:09.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三分">
+<meta name="twitter:description" content="借用大佬模板原文   作用范围单峰函数的最值。 模板凸函数求极大值：整型：while(l+1&amp;lt;r){    int lm=(l+r)&amp;gt;&amp;gt;1,rm=(lm+r)&amp;gt;&amp;gt;1;    if(judge(lm)&amp;gt;judge(rm))        r=rm;    else        l=lm;}//答案取 l 小数：while(l+eps&amp;lt;r){    doub">
 
 
 
@@ -329,9 +332,13 @@
                 
               
 
-              <time title="Created: 2019-10-21 17:54:40" itemprop="dateCreated datePublished" datetime="2019-10-21T17:54:40+08:00">2019-10-21</time>
+              <time title="Created: 2019-10-21 17:54:40 / Modified: 18:36:09" itemprop="dateCreated datePublished" datetime="2019-10-21T17:54:40+08:00">2019-10-21</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -364,7 +371,16 @@
       
 
       
-        
+        <p>借用大佬模板<br><a href="https://blog.csdn.net/hxc2101/article/details/81607571" target="_blank" rel="noopener">原文</a>  </p>
+<h1 id="作用范围"><a href="#作用范围" class="headerlink" title="作用范围"></a>作用范围</h1><p>单峰函数的最值。</p>
+<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><h2 id="凸函数求极大值："><a href="#凸函数求极大值：" class="headerlink" title="凸函数求极大值："></a>凸函数求极大值：</h2><h3 id="整型："><a href="#整型：" class="headerlink" title="整型："></a>整型：</h3><p>while(l+1&lt;r){<br>    int lm=(l+r)&gt;&gt;1,rm=(lm+r)&gt;&gt;1;<br>    if(judge(lm)&gt;judge(rm))<br>        r=rm;<br>    else<br>        l=lm;<br>}<br>//答案取 l</p>
+<h3 id="小数："><a href="#小数：" class="headerlink" title="小数："></a>小数：</h3><p>while(l+eps&lt;r){<br>    double lm=(l+r)/2,rm=(lm+r)/2;<br>    if(judge(lm)&gt;judge(rm))<br>        r=rm;<br>    else<br>        l=lm;<br>}<br>//答案取 l 或 (l+r)/2  (尽管此时 l 和 r 已经相等，但因为精度问题，取 r 可能会错)</p>
+<h2 id="凹函数求极小值："><a href="#凹函数求极小值：" class="headerlink" title="凹函数求极小值："></a>凹函数求极小值：</h2><h3 id="整型：-1"><a href="#整型：-1" class="headerlink" title="整型："></a>整型：</h3><p>while(l+1&lt;r){<br>    int lm=(l+r)&gt;&gt;1,rm=(lm+r)&gt;&gt;1;<br>    if(judge(lm)&gt;judge(rm))<br>        l=lm;<br>    else<br>        r=rm;<br>}<br>//答案取 r</p>
+<h3 id="小数：-1"><a href="#小数：-1" class="headerlink" title="小数："></a>小数：</h3><p>while(l+eps&lt;r){<br>    double lm=(l+r)/2,rm=(lm+r)/2;<br>    if(judge(lm)&gt;judge(rm))<br>        l=lm;<br>    else<br>        r=rm;<br>}<br>//答案取 r 或 (l+r)/2  (尽管此时 l 和 r 已经相等，但因为精度问题，取 l 可能会错)</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ol>
+<li><a href="http://codeforces.com/gym/102007/attachments" target="_blank" rel="noopener">Janitor Troubles</a><br>（本题可以Bretschneider公式,求圆的内接四边形面积）<br>给定边长的四边形中圆的内接四边形面积最大。<br>如果不好理解，想想割圆法。<br>$$ p=\frac{a+b+c+d}{2}\quad $$<br>$$ s=\sqrt{p(p-a)(p-b)(p-c)(p-d)} \quad $$</li>
+</ol>
+
       
     </div>
 
@@ -446,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,6 +518,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#作用范围"><span class="nav-number">1.</span> <span class="nav-text">作用范围</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模板"><span class="nav-number">2.</span> <span class="nav-text">模板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#凸函数求极大值："><span class="nav-number">2.1.</span> <span class="nav-text">凸函数求极大值：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整型："><span class="nav-number">2.1.1.</span> <span class="nav-text">整型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小数："><span class="nav-number">2.1.2.</span> <span class="nav-text">小数：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#凹函数求极小值："><span class="nav-number">2.2.</span> <span class="nav-text">凹函数求极小值：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整型：-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">整型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小数：-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">小数：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#习题"><span class="nav-number">3.</span> <span class="nav-text">习题</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
