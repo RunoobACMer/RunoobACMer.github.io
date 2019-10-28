@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="借用大佬模板原文   作用范围单峰函数的最值。 模板凸函数求极大值：整型：while(l+1&amp;lt;r){    int lm=(l+r)&amp;gt;&amp;gt;1,rm=(lm+r)&amp;gt;&amp;gt;1;    if(judge(lm)&amp;gt;judge(rm))        r=rm;    else        l=lm;}//答案取 l 小数：while(l+eps&amp;lt;r){    doub">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-21T10:36:09.820Z">
+<meta property="og:updated_time" content="2019-10-22T10:33:35.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三分">
 <meta name="twitter:description" content="借用大佬模板原文   作用范围单峰函数的最值。 模板凸函数求极大值：整型：while(l+1&amp;lt;r){    int lm=(l+r)&amp;gt;&amp;gt;1,rm=(lm+r)&amp;gt;&amp;gt;1;    if(judge(lm)&amp;gt;judge(rm))        r=rm;    else        l=lm;}//答案取 l 小数：while(l+eps&amp;lt;r){    doub">
@@ -332,12 +332,24 @@
                 
               
 
-              <time title="Created: 2019-10-21 17:54:40 / Modified: 18:36:09" itemprop="dateCreated datePublished" datetime="2019-10-21T17:54:40+08:00">2019-10-21</time>
+              <time title="Created: 2019-10-21 17:54:40" itemprop="dateCreated datePublished" datetime="2019-10-21T17:54:40+08:00">2019-10-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-10-22 18:33:35" itemprop="dateModified" datetime="2019-10-22T18:33:35+08:00">2019-10-22</time>
               
             
           </span>
@@ -380,6 +392,7 @@
 <h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><ol>
 <li><a href="http://codeforces.com/gym/102007/attachments" target="_blank" rel="noopener">Janitor Troubles</a><br>（本题可以Bretschneider公式,求圆的内接四边形面积）<br>给定边长的四边形中圆的内接四边形面积最大。<br>如果不好理解，想想割圆法。<br>$$ p=\frac{a+b+c+d}{2}\quad $$<br>$$ s=\sqrt{p(p-a)(p-b)(p-c)(p-d)} \quad $$</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">///三分，http://codeforces.com/group/xrTA2IaQje/contest/256791/attachments</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const double eps = 1e-9;</span><br><span class="line">int a[4];</span><br><span class="line"></span><br><span class="line">double getArea(double len)&#123;</span><br><span class="line">    double p = (len + a[0] + a[1])/2;</span><br><span class="line">    double Area = sqrt(p*(p-len)*(p-a[0])*(p-a[1]));</span><br><span class="line">    return Area;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">double getAns(double len)&#123;</span><br><span class="line">    double ans = getArea(len);</span><br><span class="line">    double p = (len + a[2] + a[3])/2;</span><br><span class="line">    double Area = sqrt(p*(p-len)*(p-a[2])*(p-a[3]));</span><br><span class="line">    ans += Area;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">double triDiv()&#123;</span><br><span class="line">    double l = a[1] - a[0], r = a[0] + a[1];</span><br><span class="line">    while(r-l &gt; eps)&#123;</span><br><span class="line">        double lm = (l+r)/2+eps, rm = (lm+r)/2-eps;</span><br><span class="line">        if(getAns(lm) &gt; getAns(rm))</span><br><span class="line">            r = rm;</span><br><span class="line">        else</span><br><span class="line">            l = lm;</span><br><span class="line">    &#125;</span><br><span class="line">    return l;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">double harlen(double a,double b,double c)&#123;</span><br><span class="line">    double p = (a + b + c)/2;</span><br><span class="line">    return sqrt(p*(p-a)*(p-b)*(p-c));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    scanf(&quot;%d%d%d%d&quot;,&amp;a[0],&amp;a[1],&amp;a[2],&amp;a[3]);</span><br><span class="line">    sort(a,a+4);</span><br><span class="line">    double len = triDiv();</span><br><span class="line">    double ans = getAns(len);</span><br><span class="line">    printf(&quot;%.9f\n&quot;,ans);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -419,6 +432,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/22/记忆化搜索/" rel="prev" title="记忆化搜索">
+                记忆化搜索 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +504,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
